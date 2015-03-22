@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D1E36A9E-8CBD-4CA9-8E1F-B391E7F4A39A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GitHubTips</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>26724DC387F1D10866C8E088E36782BCFA8D8CED</key>
+		<string>https://github.com/wutongr/HealthTip.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GitHubTips.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>26724DC387F1D10866C8E088E36782BCFA8D8CED</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/wutongr/HealthTip.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>26724DC387F1D10866C8E088E36782BCFA8D8CED</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>26724DC387F1D10866C8E088E36782BCFA8D8CED</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GitHubTips</string>
+		</dict>
+	</array>
+</dict>
+</plist>

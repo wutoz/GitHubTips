@@ -1,0 +1,27 @@
+//
+//  HealthTip-Prefix.pch
+//  HealthTip
+//
+//  Created by Yorke on 14/11/30.
+//  Copyright (c) 2014年 Yorke. All rights reserved.
+//
+
+#ifndef HealthTip_Prefix_pch
+#define HealthTip_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
+
+#ifdef __OBJC__
+
+#import "WTUIBoard.h"
+//#import <HealthKit/HealthKit.h>
+#import "Define.h"
+
+#import <CoreData/CoreData.h>
+
+#import "WTCoreDataStack.h"
+
+#endif
