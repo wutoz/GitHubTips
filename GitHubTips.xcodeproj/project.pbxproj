@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		41B5C90655A64E786BB02002 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 380B46EFBA330388E30DE2AA /* libPods.a */; };
 		D81C77381ABF0083004F1F00 /* WTUserUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D81C77371ABF0083004F1F00 /* WTUserUtils.m */; };
+		D81C773C1ABF04C1004F1F00 /* GitHubTips.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D81C773B1ABF04C1004F1F00 /* GitHubTips.xcdatamodeld */; };
 		D842D1051AAC73EB00C92642 /* find@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D842D1041AAC73EB00C92642 /* find@2x.png */; };
 		D842D3A41AAC8BF800C92642 /* NSDateFormatter+OCTFormattingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D842D3221AAC8BF800C92642 /* NSDateFormatter+OCTFormattingAdditions.m */; };
 		D842D3A51AAC8BF800C92642 /* NSURL+OCTQueryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D842D3241AAC8BF800C92642 /* NSURL+OCTQueryAdditions.m */; };
@@ -73,6 +74,14 @@
 		D842D3E01AAC8BF800C92642 /* OCTWatchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D842D3A01AAC8BF800C92642 /* OCTWatchEvent.m */; };
 		D842D3E11AAC8BF800C92642 /* RACSignal+OCTClientAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D842D3A21AAC8BF800C92642 /* RACSignal+OCTClientAdditions.m */; };
 		D85A7E9B1AA24AB400FD5342 /* WTViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D85A7E9A1AA24AB400FD5342 /* WTViewModel.m */; };
+		D8726CCD1AC63CF400F45A2A /* PersonPageBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = D8726CCC1AC63CF400F45A2A /* PersonPageBoard.m */; };
+		D8726CD01AC63D4500F45A2A /* PersonViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8726CCF1AC63D4500F45A2A /* PersonViewModel.m */; };
+		D8726CD21AC640FD00F45A2A /* PersonPageBoard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8726CD11AC640FD00F45A2A /* PersonPageBoard.xib */; };
+		D8726CD41AC6423300F45A2A /* 9859291.png in Resources */ = {isa = PBXBuildFile; fileRef = D8726CD31AC6423300F45A2A /* 9859291.png */; };
+		D8726CD91AC6478600F45A2A /* octicon-organization.png in Resources */ = {isa = PBXBuildFile; fileRef = D8726CD51AC6478600F45A2A /* octicon-organization.png */; };
+		D8726CDA1AC6478600F45A2A /* octicon-mail.png in Resources */ = {isa = PBXBuildFile; fileRef = D8726CD61AC6478600F45A2A /* octicon-mail.png */; };
+		D8726CDB1AC6478600F45A2A /* octicon-clock.png in Resources */ = {isa = PBXBuildFile; fileRef = D8726CD71AC6478600F45A2A /* octicon-clock.png */; };
+		D8726CDC1AC6478600F45A2A /* octicon-location.png in Resources */ = {isa = PBXBuildFile; fileRef = D8726CD81AC6478600F45A2A /* octicon-location.png */; };
 		D87615EF1AB356F300E10C9B /* CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D87615EE1AB356F300E10C9B /* CommonUtils.m */; };
 		D87615F21AB3F6B100E10C9B /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = D87615F11AB3F6B100E10C9B /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D88F189A1AA1E52500C1C34A /* WTNavigationBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = D88F18991AA1E52500C1C34A /* WTNavigationBoard.m */; };
@@ -85,7 +94,6 @@
 		D896932A1A2AD58500FF32D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D89693291A2AD58500FF32D1 /* Images.xcassets */; };
 		D896932D1A2AD58500FF32D1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D896932B1A2AD58500FF32D1 /* LaunchScreen.xib */; };
 		D89693891A2AE7D300FF32D1 /* WTUIBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = D89693881A2AE7D300FF32D1 /* WTUIBoard.m */; };
-		D89F2F2F1AB55EEF00702D49 /* GitHubTips.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D89F2F2D1AB55EEF00702D49 /* GitHubTips.xcdatamodeld */; };
 		D89F2F441AB560A700702D49 /* WTRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F2F431AB560A700702D49 /* WTRepository.m */; };
 		D89F2F471AB560A800702D49 /* WTServer.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F2F461AB560A800702D49 /* WTServer.m */; };
 		D89F2F4A1AB560A800702D49 /* WTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D89F2F491AB560A800702D49 /* WTUser.m */; };
@@ -265,6 +273,16 @@
 		D842D3A21AAC8BF800C92642 /* RACSignal+OCTClientAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+OCTClientAdditions.m"; sourceTree = "<group>"; };
 		D85A7E991AA24AB400FD5342 /* WTViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTViewModel.h; sourceTree = "<group>"; };
 		D85A7E9A1AA24AB400FD5342 /* WTViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTViewModel.m; sourceTree = "<group>"; };
+		D8726CCB1AC63CF400F45A2A /* PersonPageBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonPageBoard.h; sourceTree = "<group>"; };
+		D8726CCC1AC63CF400F45A2A /* PersonPageBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonPageBoard.m; sourceTree = "<group>"; };
+		D8726CCE1AC63D4500F45A2A /* PersonViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonViewModel.h; sourceTree = "<group>"; };
+		D8726CCF1AC63D4500F45A2A /* PersonViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonViewModel.m; sourceTree = "<group>"; };
+		D8726CD11AC640FD00F45A2A /* PersonPageBoard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonPageBoard.xib; sourceTree = "<group>"; };
+		D8726CD31AC6423300F45A2A /* 9859291.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9859291.png; sourceTree = "<group>"; };
+		D8726CD51AC6478600F45A2A /* octicon-organization.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "octicon-organization.png"; sourceTree = "<group>"; };
+		D8726CD61AC6478600F45A2A /* octicon-mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "octicon-mail.png"; sourceTree = "<group>"; };
+		D8726CD71AC6478600F45A2A /* octicon-clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "octicon-clock.png"; sourceTree = "<group>"; };
+		D8726CD81AC6478600F45A2A /* octicon-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "octicon-location.png"; sourceTree = "<group>"; };
 		D87615ED1AB356F300E10C9B /* CommonUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtils.h; sourceTree = "<group>"; };
 		D87615EE1AB356F300E10C9B /* CommonUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtils.m; sourceTree = "<group>"; };
 		D87615F01AB3F6B100E10C9B /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
@@ -288,7 +306,6 @@
 		D89693871A2AE7D300FF32D1 /* WTUIBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTUIBoard.h; sourceTree = "<group>"; };
 		D89693881A2AE7D300FF32D1 /* WTUIBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTUIBoard.m; sourceTree = "<group>"; };
 		D896938A1A2AE83B00FF32D1 /* GitHubTips-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GitHubTips-Prefix.pch"; sourceTree = "<group>"; };
-		D89F2F2E1AB55EEF00702D49 /* GitHubTips.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GitHubTips.xcdatamodel; sourceTree = "<group>"; };
 		D89F2F421AB560A700702D49 /* WTRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTRepository.h; path = GitHubTips/Classes/System/DB/WTRepository.h; sourceTree = SOURCE_ROOT; };
 		D89F2F431AB560A700702D49 /* WTRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTRepository.m; path = GitHubTips/Classes/System/DB/WTRepository.m; sourceTree = SOURCE_ROOT; };
 		D89F2F451AB560A800702D49 /* WTServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTServer.h; path = GitHubTips/Classes/System/DB/WTServer.h; sourceTree = SOURCE_ROOT; };
@@ -600,6 +617,11 @@
 		D89693731A2ADD3C00FF32D1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D8726CD51AC6478600F45A2A /* octicon-organization.png */,
+				D8726CD61AC6478600F45A2A /* octicon-mail.png */,
+				D8726CD71AC6478600F45A2A /* octicon-clock.png */,
+				D8726CD81AC6478600F45A2A /* octicon-location.png */,
+				D8726CD31AC6423300F45A2A /* 9859291.png */,
 				D842D1041AAC73EB00C92642 /* find@2x.png */,
 				D8AA69C91A37E21F00CA9B31 /* back.png */,
 			);
@@ -739,7 +761,7 @@
 		D89693801A2ADD5700FF32D1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D89F2F2D1AB55EEF00702D49 /* GitHubTips.xcdatamodeld */,
+				D81C773B1ABF04C1004F1F00 /* GitHubTips.xcdatamodeld */,
 				D89F2F511AB560A800702D49 /* WTObject.h */,
 				D89F2F521AB560A800702D49 /* WTObject.m */,
 				D89F2F4E1AB560A800702D49 /* WTEntity.h */,
@@ -772,6 +794,11 @@
 				D8B199A71AAC9B5C00F998CD /* LoginBoard.h */,
 				D8B199A81AAC9B5C00F998CD /* LoginBoard.m */,
 				D8B199A91AAC9B5C00F998CD /* LoginBoard.xib */,
+				D8726CCB1AC63CF400F45A2A /* PersonPageBoard.h */,
+				D8726CCC1AC63CF400F45A2A /* PersonPageBoard.m */,
+				D8726CD11AC640FD00F45A2A /* PersonPageBoard.xib */,
+				D8726CCE1AC63D4500F45A2A /* PersonViewModel.h */,
+				D8726CCF1AC63D4500F45A2A /* PersonViewModel.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -923,10 +950,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8726CDB1AC6478600F45A2A /* octicon-clock.png in Resources */,
+				D8726CD21AC640FD00F45A2A /* PersonPageBoard.xib in Resources */,
+				D8726CD41AC6423300F45A2A /* 9859291.png in Resources */,
 				D8B199AB1AAC9B5C00F998CD /* LoginBoard.xib in Resources */,
+				D8726CDC1AC6478600F45A2A /* octicon-location.png in Resources */,
 				D8AA69CA1A37E21F00CA9B31 /* back.png in Resources */,
+				D8726CDA1AC6478600F45A2A /* octicon-mail.png in Resources */,
 				D896932D1A2AD58500FF32D1 /* LaunchScreen.xib in Resources */,
 				D896932A1A2AD58500FF32D1 /* Images.xcassets in Resources */,
+				D8726CD91AC6478600F45A2A /* octicon-organization.png in Resources */,
 				D8DFF5571AA245520095F34F /* WTMainCell.xib in Resources */,
 				D842D1051AAC73EB00C92642 /* find@2x.png in Resources */,
 			);
@@ -991,12 +1024,13 @@
 				D8B199A51AAC8D6700F998CD /* NSValueTransformer+MTLPredefinedTransformerAdditions.m in Sources */,
 				D842D3C21AAC8BF800C92642 /* OCTGitCommit.m in Sources */,
 				D8B199A41AAC8D6700F998CD /* NSValueTransformer+MTLInversionAdditions.m in Sources */,
-				D89F2F2F1AB55EEF00702D49 /* GitHubTips.xcdatamodeld in Sources */,
 				D842D3C41AAC8BF800C92642 /* OCTIssue.m in Sources */,
 				D842D3C31AAC8BF800C92642 /* OCTGitCommitFile.m in Sources */,
+				D8726CD01AC63D4500F45A2A /* PersonViewModel.m in Sources */,
 				D8B199991AAC8D6700F998CD /* EXTScope.m in Sources */,
 				D8B1999A1AAC8D6700F998CD /* MTLJSONAdapter.m in Sources */,
 				D842D3C81AAC8BF800C92642 /* OCTMemberEvent.m in Sources */,
+				D81C773C1ABF04C1004F1F00 /* GitHubTips.xcdatamodeld in Sources */,
 				D842D3DB1AAC8BF800C92642 /* OCTSymlinkContent.m in Sources */,
 				D8B199701AAC8D5500F998CD /* ISO8601DateFormatter.m in Sources */,
 				D8B199A21AAC8D6700F998CD /* NSError+MTLModelException.m in Sources */,
@@ -1034,6 +1068,7 @@
 				D8DFF5551AA2427D0095F34F /* WTMainCell.m in Sources */,
 				D842D3C51AAC8BF800C92642 /* OCTIssueComment.m in Sources */,
 				D842D3E01AAC8BF800C92642 /* OCTWatchEvent.m in Sources */,
+				D8726CCD1AC63CF400F45A2A /* PersonPageBoard.m in Sources */,
 				D842D3A71AAC8BF800C92642 /* OCTAccessToken.m in Sources */,
 				D842D3D81AAC8BF800C92642 /* OCTServer.m in Sources */,
 				D89F2F531AB560A800702D49 /* WTObject.m in Sources */,
@@ -1237,12 +1272,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D89F2F2D1AB55EEF00702D49 /* GitHubTips.xcdatamodeld */ = {
+		D81C773B1ABF04C1004F1F00 /* GitHubTips.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D89F2F2E1AB55EEF00702D49 /* GitHubTips.xcdatamodel */,
 			);
-			currentVersion = D89F2F2E1AB55EEF00702D49 /* GitHubTips.xcdatamodel */;
 			name = GitHubTips.xcdatamodeld;
 			path = ../GitHubTips.xcdatamodeld;
 			sourceTree = "<group>";

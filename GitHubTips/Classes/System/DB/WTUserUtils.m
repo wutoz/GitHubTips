@@ -14,6 +14,7 @@
 + (void)fetchFollowing {
     RACSignal *request = [[CommonUtils client] fetchFollowing];
     [[request collect] subscribeNext:^(NSArray *followings) {
+        [WTCoreDataStack deleteOCTUsers:followings];
         [WTCoreDataStack saveOCTUsers:followings];
     } error:^(NSError *error) {
         NSLog(@"%ld",[error code]);
@@ -25,6 +26,7 @@
 + (void)fetchFollowers {
     RACSignal *request = [[CommonUtils client] fetchFollowers];
     [[request collect] subscribeNext:^(NSArray *followers) {
+        [WTCoreDataStack deleteOCTUsers:followers];
         [WTCoreDataStack saveOCTUsers:followers];
     } error:^(NSError *error) {
         NSLog(@"%ld",[error code]);
@@ -58,7 +60,8 @@
 + (void)fetchUserInfoWithLogin:(NSString *)login {
     RACSignal *request = [[CommonUtils clientWithLogin:login] fetchUserInfo];
     [request subscribeNext:^(OCTUser *user) {
-        
+        [WTCoreDataStack deleteOCTUsers:@[user]];
+        [WTCoreDataStack saveOCTUsers:@[user]];
     } error:^(NSError *error) {
         NSLog(@"%ld",[error code]);
     } completed:^{

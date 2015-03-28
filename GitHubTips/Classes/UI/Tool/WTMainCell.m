@@ -9,7 +9,6 @@
 #import "WTMainCell.h"
 
 @interface WTMainCell (){
-    UILabel *_titleLab;
 }
 
 @end
@@ -18,12 +17,10 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    _titleLab = [[UILabel alloc]initWithFrame:CGRectMake(20, 20, 200, 50)];
-    [self.contentView addSubview:_titleLab];
 }
 
 - (void)setContent:(id)content{
-    _titleLab.text = content;
+    self.textLabel.text = content;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

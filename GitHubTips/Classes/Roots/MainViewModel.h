@@ -8,10 +8,10 @@
 
 #import "WTViewModel.h"
 
+@class PersonViewModel;
 @interface MainViewModel : WTViewModel
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic, strong) NSArray *repositories;
 
 @property (nonatomic, readonly) RACSubject *updatedContentSignal;
 
@@ -20,5 +20,7 @@
 -(NSString *)titleForSection:(NSInteger)section;
 -(NSString *)titleAtIndexPath:(NSIndexPath *)indexPath;
 -(NSString *)subtitleAtIndexPath:(NSIndexPath *)indexPath;
+
+- (PersonViewModel *)personViewModel:(NSIndexPath *)indexPath;
 
 @end

@@ -145,20 +145,43 @@
 }
 
 + (void)saveOCTUsers:(NSArray *)currentUsers{
-    //判断数据库中是否存在，存在则修改，不存在则新增
     for(OCTUser *user in currentUsers){
         [[WTCoreDataStack defaultStack] saveOCTUser:user];
     }
+    dispatch_async([WTCoreDataStack defaultStack].coredataQueue, ^{
+        [[WTCoreDataStack defaultStack]saveContext];
+    });
 }
 
 + (void)deleteOCTUsers:(NSArray *)currentUsers{
     for(OCTUser *user in currentUsers){
-        
+        for(WTUser *wtuser in [[WTCoreDataStack defaultStack]selectWTUsers:user.login])
+            [[WTCoreDataStack defaultStack] deleteWTUser:wtuser];
     }
+    dispatch_async([WTCoreDataStack defaultStack].coredataQueue, ^{
+        [[WTCoreDataStack defaultStack]saveContext];
+    });
 }
 
-+ (OCTUser *)selectOCTUser:(NSString *)login{
-    return nil;
+- (NSArray *)selectWTUsers:(NSString *)login {
+    NSError *error;
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+    NSEntityDescription *entityDes =[NSEntityDescription entityForName:@"WTUser" inManagedObjectContext:[[WTCoreDataStack defaultStack] managedObjectContext]];
+    [request setEntity:entityDes];
+    
+    if(login){
+        NSPredicate *pred=[NSPredicate predicateWithFormat:@"rawLogin = %@",login];
+        [request setPredicate:pred];
+    }
+    
+    NSArray *users=[[[WTCoreDataStack defaultStack] managedObjectContext] executeFetchRequest:request error:&error];
+    return users;
+}
+
+- (void)deleteWTUser:(WTUser *)user {
+    dispatch_async(_coredataQueue, ^{
+        [[[WTCoreDataStack defaultStack] managedObjectContext] deleteObject:user];
+    });
 }
 
 - (void)saveOCTUser:(OCTUser *)currentUser{
@@ -230,8 +253,6 @@
             entity.wtrepositories = [NSSet set];
             entity;
         });
-        
-        [[WTCoreDataStack defaultStack]saveContext];
     });
     
 }

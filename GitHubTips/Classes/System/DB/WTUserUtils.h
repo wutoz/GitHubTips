@@ -13,6 +13,8 @@
 @interface WTUserUtils : NSObject
 
 + (void)fetchUserInfo;
++ (void)fetchUserInfoWithUser:(OCTUser *)user;
++ (void)fetchUserInfoWithLogin:(NSString *)login;
 
 + (void)fetchFollowing;
 + (void)fetchFollowers;

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6751" systemVersion="14C1510" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="WTEntity" representedClassName="WTEntity" syncable="YES">
+        <attribute name="avatarURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="blog" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="collaborators" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diskUsage" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="followers" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="following" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="login" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="privateGistCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="privateRepoCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="publicGistCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="publicRepoCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="wtobject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WTObject" inverseName="wtentity" inverseEntity="WTObject" syncable="YES"/>
+        <relationship name="wtplan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WTPlan" inverseName="wtentity" inverseEntity="WTPlan" syncable="YES"/>
+        <relationship name="wtrepositories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WTRepository" inverseName="wtentity" inverseEntity="WTRepository" syncable="YES"/>
+        <relationship name="wtuser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WTUser" inverseName="wtentity" inverseEntity="WTUser" syncable="YES"/>
+    </entity>
+    <entity name="WTObject" representedClassName="WTObject" syncable="YES">
+        <attribute name="uid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="wtentity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WTEntity" inverseName="wtobject" inverseEntity="WTEntity" syncable="YES"/>
+        <relationship name="wtplan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WTPlan" inverseName="wtobject" inverseEntity="WTPlan" syncable="YES"/>
+        <relationship name="wtrespository" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WTRepository" inverseName="wtobject" inverseEntity="WTRepository" syncable="YES"/>
+        <relationship name="wtserver" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WTServer" inverseName="wtobject" inverseEntity="WTServer" syncable="YES"/>
+    </entity>
+    <entity name="WTPlan" representedClassName="WTPlan" syncable="YES">
+        <attribute name="collaborators" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="privateRepos" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="space" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="wtentity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WTEntity" inverseName="wtplan" inverseEntity="WTEntity" syncable="YES"/>
+        <relationship name="wtobject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WTObject" inverseName="wtplan" inverseEntity="WTObject" syncable="YES"/>
+    </entity>
+    <entity name="WTRepository" representedClassName="WTRepository" syncable="YES">
+        <attribute name="dateCreated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="datePushed" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dateUpdated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="defaultBranch" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="focksCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="fork" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="gitURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="htmlURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="httpsURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isprivate" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="issuesHTMLURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="openIssuesCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="ownerLogin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="repoDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sshURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stargazersCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="subscribersCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="watchersCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="wtentity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WTEntity" inverseName="wtrepositories" inverseEntity="WTEntity" syncable="YES"/>
+        <relationship name="wtforkParent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WTRepository" inverseName="wtforkParent" inverseEntity="WTRepository" syncable="YES"/>
+        <relationship name="wtforkSource" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WTRepository" inverseName="wtforkSource" inverseEntity="WTRepository" syncable="YES"/>
+        <relationship name="wtobject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WTObject" inverseName="wtrespository" inverseEntity="WTObject" syncable="YES"/>
+    </entity>
+    <entity name="WTServer" representedClassName="WTServer" syncable="YES">
+        <attribute name="aPIEndpoint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="baseURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="baseWebURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enterprise" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="wtobject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WTObject" inverseName="wtserver" inverseEntity="WTObject" syncable="YES"/>
+    </entity>
+    <entity name="WTUser" representedClassName="WTUser" syncable="YES">
+        <attribute name="rawLogin" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="wtentity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WTEntity" inverseName="wtuser" inverseEntity="WTEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="WTEntity" positionX="-63" positionY="-18" width="128" height="28"/>
+        <element name="WTObject" positionX="-54" positionY="-9" width="128" height="28"/>
+        <element name="WTPlan" positionX="-36" positionY="9" width="128" height="28"/>
+        <element name="WTRepository" positionX="-18" positionY="27" width="128" height="28"/>
+        <element name="WTServer" positionX="0" positionY="45" width="128" height="28"/>
+        <element name="WTUser" positionX="18" positionY="63" width="128" height="28"/>
+    </elements>
+</model>

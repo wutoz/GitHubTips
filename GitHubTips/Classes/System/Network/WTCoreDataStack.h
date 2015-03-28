@@ -22,11 +22,10 @@
 
 @property (nonatomic, readonly) dispatch_queue_t coredataQueue;
 
-+ (void)saveOCTUsers:(NSArray *)currentUsers;
-+ (void)deleteOCTUsers:(NSArray *)currentUsers;
-+ (OCTUser *)selectOCTUser:(NSString *)login;
-
 - (void)saveContext;
 - (void)ensureInitialLoad;
+
++ (void)saveOCTUsers:(NSArray *)currentUsers;
++ (void)deleteOCTUsers:(NSArray *)currentUsers;
 
 @end

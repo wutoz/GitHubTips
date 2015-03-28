@@ -10,6 +10,7 @@
 #import "CommonUtils.h"
 #import "WTUser.h"
 #import "WTEntity.h"
+#import "PersonViewModel.h"
 
 @interface MainViewModel ()<NSFetchedResultsControllerDelegate>
 
@@ -56,7 +57,7 @@
 
 -(NSString *)subtitleAtIndexPath:(NSIndexPath *)indexPath{
     WTUser *user = [self userAtIndexPath:indexPath];
-    return [user valueForKey:@keypath(user,rawLogin)];
+    return [user valueForKey:@keypath(user,wtentity.company)];
 }
 
 -(WTUser *)userAtIndexPath:(NSIndexPath *)indexPath{
@@ -98,6 +99,11 @@
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller{
     [(RACSubject *)self.updatedContentSignal sendNext:nil];
+}
+
+- (PersonViewModel *)personViewModel:(NSIndexPath *)indexPath {
+    PersonViewModel *viewModel = [[PersonViewModel alloc]initWithUser:[self userAtIndexPath:indexPath]];
+    return viewModel;
 }
 
 @end

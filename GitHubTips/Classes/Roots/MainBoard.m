@@ -9,6 +9,7 @@
 #import "MainBoard.h"
 #import "MainViewModel.h"
 #import "WTMainCell.h"
+#import "PersonPageBoard.h"
 
 @interface MainBoard ()<UITableViewDataSource,UITableViewDelegate>{
     
@@ -29,9 +30,8 @@
     @weakify(self);
     [self.viewModel.updatedContentSignal subscribeNext:^(id x) {
         @strongify(self);
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
-        });
+        [self.tableView reloadData];
+        
     }];
     // Do any additional setup after loading the view.
 }
@@ -72,7 +72,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 200;
+    return 50;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -96,6 +96,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    PersonPageBoard *board = [[PersonPageBoard alloc]init];
+    board.viewModel = [self.viewModel personViewModel:indexPath];
+    [self.navigationController pushViewController:board animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

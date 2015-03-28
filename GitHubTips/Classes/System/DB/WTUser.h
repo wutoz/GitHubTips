@@ -13,7 +13,7 @@
 
 @interface WTUser : NSManagedObject
 
-@property (nonatomic, retain) NSString * rawLogin;
+@property (nonatomic, retain) NSString *rawLogin;
 @property (nonatomic, retain) WTEntity *wtentity;
 
 @end
