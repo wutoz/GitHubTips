@@ -11,20 +11,24 @@
 
 @implementation UIViewController (Swizzle)
 
++ (void)load {
+    swizzleAllViewController();
+}
+
 - (void)WTViewDidLoad{
-//    NSLog(@"%@ load",NSStringFromClass([self class]));
+    NSLog(@"%@ load",NSStringFromClass([self class]));
     
     [self WTViewDidLoad];
 }
 
 - (void)WTViewWillDisappear:(BOOL)animated{
-//    NSLog(@"%@ disappear",NSStringFromClass([self class]));
+    NSLog(@"%@ disappear",NSStringFromClass([self class]));
     
     [self WTViewWillDisappear:animated];
 }
 
 - (void)WTViewWillAppear:(BOOL)animated{
-//    NSLog(@"%@ appear",NSStringFromClass([self class]));
+    NSLog(@"%@ appear",NSStringFromClass([self class]));
     
     [self WTViewWillAppear:animated];
 }
